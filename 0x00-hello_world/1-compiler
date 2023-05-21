@@ -1,2 +1,3 @@
 #!/bin/bash
-CFILE="example.c"; gcc -c $CFILE -o "${CFILE%.c}.o"
+CFILE="example.c"; OUTPUT="${CFILE%.c}.o"; gcc -c $CFILE -o $OUTPUT
+
