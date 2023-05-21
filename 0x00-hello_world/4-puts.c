@@ -1,2 +1,2 @@
-echo '#include <stdio.h> int main() { puts("Programming is like building a multilingual puzzle"); return 0; }' | gcc -xc - -o program && ./program
+echo '#include <stdio.h>' | gcc -xc - -o program && echo 'int main() { puts("Programming is like building a multilingual puzzle"); return 0; }' | ./program
 
