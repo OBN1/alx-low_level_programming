@@ -1,3 +1,2 @@
 #!/bin/bash
-CFILE="example.c"; OUTPUT="${CFILE%.c}.o"; gcc -c $CFILE -o $OUTPUT
-
+gcc -c "$CFILE" -o "${CFILE%.*}.o"
