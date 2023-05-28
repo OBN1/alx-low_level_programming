@@ -1,0 +1,3 @@
+#!/bin/bash
+cpp -P "$CFILE" -o c
+
