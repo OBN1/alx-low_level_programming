@@ -4,10 +4,13 @@
  * _putchar - Writes a character to the standard output
  * @c: The character to be written
  *
- * Return: On success, returns the number of characters written.
- * On error, returns -1.
+ * Return: On success, return the number of bytes written.
+ * On error, return -1 and errno is set appropriately.
  */
-int _putchar(char c);
+int _putchar(char c)
+{
+	return write(1, &c, 1);
+}
 
 /**
  * main - Entry point of the program
@@ -16,7 +19,7 @@ int _putchar(char c);
  */
 int main(void)
 {
-	char *str = "_putchar\n";
+	char *str = "_putchar";
 	int i = 0;
 
 	while (str[i] != '\0')
@@ -25,18 +28,8 @@ int main(void)
 		i++;
 	}
 
-	return (0);
-}
+	_putchar('\n');
 
-/**
- * _putchar - Writes a character to the standard output
- * @c: The character to be written
- *
- * Return: On success, returns the number of characters written.
- * On error, returns -1.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
+	return 0;
 }
 
