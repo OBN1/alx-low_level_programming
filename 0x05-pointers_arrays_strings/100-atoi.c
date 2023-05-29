@@ -1,4 +1,4 @@
-#include "main.k"
+#include "main.h"
 /**
  * _atoi - Converting a string to integer
  * @s: char array string
