@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _puts - printing to stdout
  * @str: char type string
@@ -7,13 +6,11 @@
  */
 void _puts(char *str)
 {
-	int d = 0;
+	int d;
 
-	do {
+	for (d = 0; str[d] != '\0'; d++)
+	{
 		_putchar(str[d]);
-		d++;
-	} while (str[d] != '\0');
-
+	}
 	_putchar('\n');
 }
-
