@@ -1,5 +1,4 @@
-i#include "main.h"
-
+#include "main.h"
 /**
  * cap_string - Capitalizes all words of a string.
  * @str: The string to be capitalized.
@@ -13,14 +12,23 @@ char *cap_string(char *str)
 
 	while (str[i] != '\0')
 	{
-		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
-		str[i] == ',' || str[i] == ';' || str[i] == '.' ||
-		str[i] == '!' || str[i] == '?' || str[i] == '"' ||
-		str[i] == '(' || str[i] == ')' || str[i] == '{' ||
-		str[i] == '}')
-		{
+		if
+			(str[i] == ' ' ||
+			str[i] == '\t' ||
+			str[i] == '\n' ||
+			str[i] == ',' ||
+			str[i] == ';' ||
+			str[i] == '.' ||
+			str[i] == '!' ||
+			str[i] == '?' ||
+			str[i] == '"' ||
+			str[i] == '(' ||
+			str[i] == ')' ||
+			str[i] == '{' ||
+			str[i] == '}')
+			{
 			capitalize_next = 1;
-		}
+			}
 		else if (capitalize_next && islower(str[i]))
 		{
 			str[i] = toupper(str[i]);
