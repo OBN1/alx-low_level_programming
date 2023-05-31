@@ -24,7 +24,7 @@ char *leet(char *str)
 			}
 			j++;
 		}
-		i++
+		i++;
 	}
 	return (str);
 }
