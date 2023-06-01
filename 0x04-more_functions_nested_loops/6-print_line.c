@@ -13,7 +13,7 @@ void print_line(int n)
 	{
 		while (e < n) /* Print (_) n times using a while loop */
 		{
-			_putchar(95); /* The number 95 represents the underscore character in ASCII */
+			_putchar(95); /* 95 is the underscore in ascii */
 			e++; /* Increment the counter */
 		}
 		_putchar('\n'); /* Print a newline character */
