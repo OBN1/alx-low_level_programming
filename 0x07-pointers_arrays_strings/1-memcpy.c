@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /*file: 1-memcpy.c*/
 /**
  * _memcpy - copies n bytes from memory area src to memory area dest
@@ -20,4 +20,3 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 
 	return (dest);
 }
-
