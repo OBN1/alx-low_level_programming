@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /*file: 5-strstr.c*/
 /**
  * _strstr - finds the first occurrence of the substring needle
