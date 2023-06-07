@@ -6,15 +6,19 @@
  * Return: void
  */
 
-char *_puts_recursion(char *s)
+void _puts_recursion(char *s)
 {
-	int k = 0;
+	if (*s == '\0')
 
-	while (s[k] != '\0')
 	{
-		_putchar([k]);
-		k++;
+		_putchar('\n');
+	return;
 	}
-	_putchar('\n');
+
+	else
+	{
+		_putchar(*s);
+		_puts_recursion(s + 1);
+	}
 }
 
