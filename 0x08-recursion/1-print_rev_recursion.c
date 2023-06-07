@@ -1,11 +1,13 @@
 #include "main.h"
-
+/*file: 1-print_rev_recursion.c*/
 /**
- * _print_rev_recursion - Prints a string in reverse
- * @s: String
+ * _print_rev_recursion - prints a string in rev
+ *
+ * @s: string
+ *
  * Return: void
  */
-void _print_rev_recursion(char *s);
+void _print_rev_recursion(char *s)
 {
 	if (*s != '\0')
 	{
