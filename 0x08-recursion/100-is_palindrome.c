@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
  * compare - compare first and last indices of the word that is being matched
@@ -39,6 +39,6 @@ int _strlen(char *str)
 int is_palindrome(char *s)
 {
 	int len = _strlen(s);
-	
-	return(compare(s, (s + len - 1)));
+
+	return (compare(s, (s + len - 1)));
 }
