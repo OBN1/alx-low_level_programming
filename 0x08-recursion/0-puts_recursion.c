@@ -6,7 +6,7 @@
  * Return: void
  */
 
-void _puts_recursion(char *s)
+void 0_puts_recursion(char *s)
 {
 	int k = 0;
 
