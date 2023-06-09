@@ -3,8 +3,8 @@
 /**
  * main - Program that adds positive numbers followed by a new line
  * @argc: Argument count
- * @argv: arguument vector
- * return: Return 0 on succsess, otherwise return 1
+ * @argv: Argument vector
+ * Return: Always 0 (Success)
  */
 int main(int argc, char *argv[])
 {
