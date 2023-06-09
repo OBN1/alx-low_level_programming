@@ -9,12 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	int k;
-
-	for (k = 0; argv[0][k] != '\0'; k++)
-		putchar(argv[0][k]);
-
-	putchar('\n');
-
+	if (argc > 0)
+		printf("%s\n", argv[0]);
 	return (0);
 }
