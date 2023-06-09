@@ -7,7 +7,7 @@
  * Return: 0 if successul
  */
 
-int main(int argc,  * argv[])
+int main(int argc, __attribute__((unused)) * argv[])
 {
 	printf("%d\n", argc - 1);
 	return (0);
