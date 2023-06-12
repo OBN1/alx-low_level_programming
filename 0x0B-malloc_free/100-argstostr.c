@@ -3,8 +3,8 @@
 
 /**
  * *argstostr - cencetenates all the arguments of the program
- * @c: number of arguments
- * @v: array of arguments
+ * @ac: number of arguments
+ * @av: array of arguments
  * Return: Pointer to the new string (success), NULL (error)
  */
 
