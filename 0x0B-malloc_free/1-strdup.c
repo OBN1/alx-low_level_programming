@@ -1,30 +1,29 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
- * _strdup - Copies the string given as parameter
- * @str: String to duplicate
- *
- * Return: Pointer to the copied string (Success), NULL (error)
+ * _strdup - copies the string given as parameter
+ * @str: string to duplicate
+ * Return: pointer to the copied string (Success), NULL (Error)
  */
 char *_strdup(char *str)
 {
-	int i, j;
-	char *ar;
+	char *y;
+	int x;
 
-	if (str == NULL)
+	if (str == 0)
 		return (NULL);
 
-	for (i = 0; str[i] != '\0'; i++)
-	;
+	for (x = 0; *(str + x) != 0; x++)
+	{}
 
-	ar = (char *)malloc(sizeof(char) * (i + 1);
+	y = malloc(sizeof(char) * x + 1);
 
-	if (ar == NULL)
-		return (NULL);
+	if (y == NULL)
+		return (0);
 
-	for (j = 0; j <= i; j++)
-		ar[j] = str[j];
+	for (x = 0;  *(str + x) != 0; x++)
+		*(y + x) = *(str + x);
 
-	return (ar);
+	*(y + x) = 0;
+	return (y);
 }
