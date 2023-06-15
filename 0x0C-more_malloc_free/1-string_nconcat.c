@@ -2,40 +2,59 @@
 #include <stdlib.h>
 
 /**
- * string_nconcat - concatenates two strings
- * @s1: Pointer to first string
- * @s2: Ponter to second string
- * @n: first number of bytes of s2
- * Return: Pointer to the new allocated space in memory
+ * _strlen - returns the length of a string
+ * @s: string to evaluate
+ *
+ * Return: the length of the string
  */
+int _strlen(char *s)
+{
+	int i = 0;
 
+	while (s[i] != 0)
+	{
+		i++;
+	}
+	return (i);
+}
+
+/**
+ * *string_nconcat - concatenates n bytes of a string to another string
+ * @s1: string to append to
+ * @s2: string to concatenate from
+ * @n: number of bytes from s2 to concatenate to s1
+ *
+ * Return: pointer to the resulting string
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *m;
-	unsigned int k, ls2;
+	unsigned int i, j, len1, len2;
+	char *p;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	if (n >= strle(s2))
-		ls2 = strlen(s2);
-	else
-		ls2 = n;
+	len1 = _strlen(s1);
+	len2 = _strlen(s2);
 
-	m = malloc(strlen(s1 + ls2 + 1);
+	if (n >= len2)
+		n = len2;
 
-	if (m == NULL)
+	p = malloc(sizeof(char) * (len1 + n + 1));
+
+	if (p == NULL)
 		return (NULL);
 
-	for (k = 0; k < strlen(s1); k++)
-		m[i] = s1[k];
+	for (i = 0; i < len1; i++)
+		*(p + i) = *(s1 + i);
 
-	for (k = strlen(s1); k < strlen(s1) + ls2; k++)
-		m[i] = *s2++;
+	for (j = 0; j < n; j++)
+		*(p + i + j) = *(s2 + j);
 
-	m[i] = '\0';
-	return (m);
+	*(p + i + j) = 0;
+
+	return (p);
 }
 
