@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * _strlen - returns the length of a string
+ * _strlen - returns the length of a string.
  * @s: string to evaluate
- * Return: the length of a string
+ * Return: the length of the string
  */
 
 int _strlen(char *s)
@@ -19,7 +19,7 @@ int _strlen(char *s)
 
 /**
  * *_strcpy - copies the string pointed to by src
- * inluding the terminated null bye (\0)
+ * including the terminating null byte (\0)
  * to the buffer pointed to by dest
  * @dest: pointer to the buffer in which we copy the string
  * @src: string to be copied
@@ -50,7 +50,7 @@ char *_strcpy(char *dest, char *src)
  * new_dog - creates a new dog
  * @name: name to initialize
  * @age: age to initialize
- * @owner: owner to initiliaze
+ * @owner: owner to initialize
  *
  * Return: return struct pointer
  */
@@ -61,6 +61,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	n = malloc(sizeof(struct dog));
 	if (n == NULL)
 		return (NULL);
+
 	n->name = malloc(_strlen(name) + 1);
 	if (n->name == NULL)
 	{
@@ -75,7 +76,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(n->name);
 		return (NULL);
 	}
-	-strcpy(n->name, name);
+	_strcpy(n->name, name);
 	_strcpy(n->owner, owner);
 	return (n);
 }
+
