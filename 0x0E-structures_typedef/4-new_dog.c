@@ -1,3 +1,4 @@
+#include <string.h>
 #include "dog.h"
 #include <stdlib.h>
 
