@@ -16,38 +16,33 @@ void print_opcodes(int num_bytes);
  */
 int main(int argc, char *argv[])
 {
+	int size, i;
+	char *p;
+
+	p = (char *)main;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
-		return (1);
+		exit(1);
 	}
 
-	int num_bytes = atoi(argv[1]);
+	size = atoi(argv[1]);
 
-	if (num_bytes < 0)
+	if (size < 0)
 	{
 		printf("Error\n");
-		return (2);
+		exit(2);
 	}
 
-	print_opcodes(num_bytes);
-
+	for (i = 0; i < size; i++)
+	{
+		printf("%02hhx", p[i]);
+		if (i + 1 != size)
+			putchar (32);
+		else
+			putchar (10);
+	}
 	return (0);
 }
 
-/**
- * print_opcodes - Prints the opcodes of the main function.
- * @num_bytes: Number of bytes to print.
- */
-
-void print_opcodes(int num_bytes)
-{
-	unsigned char *ptr = (unsigned char *)main;
-
-	for (int i = 0; i < num_bytes; i++)
-	{
-		printf("%02x ", ptr[i]);
-	}
-
-	printf("\n");
-}
