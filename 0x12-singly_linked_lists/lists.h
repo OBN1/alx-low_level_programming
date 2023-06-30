@@ -6,7 +6,7 @@
 #include <string.h>
 
 /**
- * struct lists_s - Singly linked list
+ * struct list_s - Singly linked list
  * @str: string
  * @next: points to the next node
  * @len: length of string
